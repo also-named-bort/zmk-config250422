@@ -61,7 +61,7 @@
 		
 		right_layer {
 			bindings = <
-				&kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &kp SEMICOLON &kp COLON 	&none 			&kp EQUAL 	&kp AMPS 	&kp GRAVE 	&kp TILDE 	&none 
+				&kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &kp SEMICOLON &kp COLON 	&kp LG(TAB) 		&kp EQUAL 	&kp AMPS 	&kp GRAVE 	&kp TILDE 	&none 
 				&kp BACKSLASH 	&hm LGUI LT 	&hm LALT LBRC 	&hm LCTRL LPAR 	&kp LBKT 		&none 		&kp DLLR 	&kp PRCNT 	&kp CARET 	&kp UNDER 
 				&kp PIPE 	&kp GT 		&kp RBRC 	&kp RPAR 	&kp RBKT 		&none 		&kp EXCL 	&kp AT 		&kp HASH 	&none 
 										&mo 2 		&kp BACKSPACE 		&none 		&mo 3 
