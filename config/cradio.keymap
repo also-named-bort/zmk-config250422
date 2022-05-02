@@ -9,16 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / { 
-	macros {
-		mac_ltgt: macro_ltgt {
-			label = "MACRO_lessthan_greaterthan";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings 
-				= <&macro_press &kp LT &kp GT &kp LEFT_ARROW>;
-		};
-	};
-	
 	behaviors {
 		hm: homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
@@ -28,16 +18,6 @@
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
-		};
-		
-		ht_ltgt: holdtap_ltgt {
-			compatible = "zmk,behavior-hold-tap";
-			label = "HT_MAC_LTGT";
-			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			quick-tap-ms = <0>;
-			flavor = "tap-preferred";
-			bindings = <&mac_ltgt>, <&kp>;
 		};
 	};
 	
@@ -81,8 +61,8 @@
 		
 		sym_layer {
 			bindings = <
-				&none 			&none 			&kp SEMICOLON 		&kp COLON 		&none 			&kp EQUAL 		&kp AMPS 		&kp GRAVE 		&kp TILDE 		&none 
-				&kp BACKSLASH 		&mac_ltgt 0 LT 		&hm LALT LBRC 		&hm LCTRL LPAR 		&kp LBKT 		&none 			&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
+				&none 			&none 			&kp SEMICOLON 		&kp COLON 		&none 			&none 			&kp AMPS 		&kp GRAVE 		&kp TILDE 		&none 
+				&kp BACKSLASH 		&kp LT 			&kp LBRC 		&kp LPAR 		&kp LBKT 		&kp EQUAL 		&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
 				&kp PIPE 		&kp GT 			&kp RBRC 		&kp RPAR 		&kp RBKT 		&none 			&kp EXCL 		&kp AT 			&kp HASH 		&none 
 													&mo 2 			&kp BACKSPACE 		&none 			&mo 3 
 			>;
