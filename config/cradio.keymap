@@ -9,50 +9,79 @@
 #include <dt-bindings/zmk/bt.h>
 
 / { 
+	macros {
+		mac_gtlt: gtlt {
+			label = "Greater than, Less than";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp LT &kp GT &kp LEFT_ARROW>;
+		};
+		mac_brc: brc {
+			label = "Braces";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp LBRC &kp RBRC &kp LEFT_ARROW>;
+		};
+		mac_par: par {
+			label = "Parentheses";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT_ARROW>;
+		};
+		mac_bkt: bkt {
+			label = "Brackets";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT_ARROW>;
+		};
+	};
 	behaviors {
 		hm: homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			tapping-term-ms = <300>;
+			tapping-term-ms = <200>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
+		ht_ltgt:  {
+			compataible = "zmk,behavior-hold-tap";
+			label = "hold tap for greater lesser";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&gtlt>, <&kp>;
+		};
+		ht_brc:  {
+			compataible = "zmk,behavior-hold-tap";
+			label = "hold tap for braces";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&brc>, <&kp>;
+		};
+		ht_par:  {
+			compataible = "zmk,behavior-hold-tap";
+			label = "hold tap for parentheses";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&par>, <&kp>;
+		};
+		ht_bkt:  {
+			compataible = "zmk,behavior-hold-tap";
+			label = "hold tap for brackets";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&bkt>, <&kp>;
+		};
 	};
-
-	macros {
-		gtlt: gtlt {
-			label = "Greater than, Less than";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_tap &kp LT &kp GT &kp LEFT_ARROW>
-		;
-		brc: brc {
-			label = "Braces";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_tap &kp LBRC &kp RBRC &kp LEFT_ARROW>
-		;
-		par: par {
-			label = "Parentheses";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_tap &kp LPAR &kp RPAR &kp LEFT_ARROW>
-		;
-		bkt: bkt {
-			label = "Greater than - Less than";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_tap &kp LBKT &kp RBKT &kp LEFT_ARROW>
-		;
-
-	};
-
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
 		tri_layer {
@@ -60,10 +89,8 @@
 			then-layer = <4>;
 		};
 	};
-	
 	keymap {
 		compatible = "zmk,keymap";
-		
 		default_layer {
 			bindings = <
 				&kp Q 			&kp W 			&kp F 			&kp P 			&kp B 				&kp J 			&kp L 			&kp U 			&kp Y 			&kp QUOT 
@@ -72,7 +99,6 @@
 																&mo 2 			&kp LEFT_SHIFT 		&kp SPACE 		&mo 3 
 			>;
 		};
-		
 		qwert_layer {
 			bindings = <
 				&kp Q 			&kp W 			&kp E 			&kp R 			&kp T				&kp Y 			&kp U 			&kp I 			&kp O 			&kp P 
@@ -81,25 +107,22 @@
 																&trans 			&kp LEFT_SHIFT 		&kp SPACE 		&trans 
 			>;
 		};
-		
 		nav_layer {
 			bindings = <
 				&kp END 		&kp PAGE_DOWN 	&kp PAGE_UP 	&kp HOMEp 		&kp ESCAPE 			&kp KP_PLUS 	&kp N7 			&kp N8 			&kp N9 			&kp KP_MULTIPLY 
 				&kp LEFT_ARROW 	&kp DOWN_ARROW 	&kp UP_ARROW 	&kp RIGHT_ARROW &kp TAB 			&kp DOT 		&hm RCTRL N4 	&hm RALT N5 	&hm RGUI N6 	&kp N0 
-				&hm LC(LG(LEFT)) LA(LS(TAB)) &hm LC(LG(RIGHT)) LA(TAB) &hm LG(TAB) LC(LS(TAB)) &kp LC(TAB) &kp DELETE &kp KP_MINUS &kp N1 &kp N2 	&kp N3 			&kp KP_DIVIDE 
+				&kp LA(LS(TAB)) &kp LA(TAB) 	&kp LC(LS(TAB)) &kp LC(TAB) 	&kp DELETE 			&kp KP_MINUS 	&kp N1 			&kp N2 			&kp N3 			&kp KP_DIVIDE 
 																&trans 			&kp LEFT_SHIFT 		&kp RETURN 		&trans 
 			>;
 		};
-		
 		sym_layer {
 			bindings = <
 				&none 			&none 			&kp SEMICOLON 	&kp COLON 		&none 				&kp EQUAL 		&kp AMPS 		&kp GRAVE 		&kp TILDE 		&none 
-				&kp BACKSLASH 	&hm LGUI LT 	&hm LALT LBRC 	&hm LCTRL LPAR 	&kp LBKT 			&none 			&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
+				&kp BACKSLASH 	&ht_ltgt LT 	&ht_brc LBRC 	&ht_par LPAR 	&ht_bkt LBKT 		&none 			&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
 				&kp PIPE 		&kp GT 			&kp RBRC 		&kp RPAR 		&kp RBKT 			&none 			&kp EXCL 		&kp AT 			&kp HASH 		&none 
 																&trans 			&kp BACKSPACE 		&none 			&trans 
 			>;
 		};	
-		
 		tri_layer {
 			bindings = <
 				&bt BT_CLR 		&kp C_MUTE 		&kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp C_BRIGHTNESS_INC &tog 1 		&kp F7 			&kp F8 			&kp F9 			&kp F10 
