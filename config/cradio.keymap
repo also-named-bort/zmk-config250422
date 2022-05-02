@@ -20,7 +20,39 @@
 			bindings = <&kp>, <&kp>;
 		};
 	};
-	
+
+	macros {
+		gtlt: gtlt {
+			label = "Greater than, Less than";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp LT &kp GT &kp LEFT_ARROW>
+		;
+		brc: brc {
+			label = "Braces";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp LBRC &kp RBRC &kp LEFT_ARROW>
+		;
+		par: par {
+			label = "Parentheses";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp LPAR &kp RPAR &kp LEFT_ARROW>
+		;
+		bkt: bkt {
+			label = "Greater than - Less than";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp LBKT &kp RBKT &kp LEFT_ARROW>
+		;
+
+	};
+
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
 		tri_layer {
@@ -54,7 +86,7 @@
 			bindings = <
 				&kp END 		&kp PAGE_DOWN 	&kp PAGE_UP 	&kp HOMEp 		&kp ESCAPE 			&kp KP_PLUS 	&kp N7 			&kp N8 			&kp N9 			&kp KP_MULTIPLY 
 				&kp LEFT_ARROW 	&kp DOWN_ARROW 	&kp UP_ARROW 	&kp RIGHT_ARROW &kp TAB 			&kp DOT 		&hm RCTRL N4 	&hm RALT N5 	&hm RGUI N6 	&kp N0 
-				&hm LC(LG(Left)) LA(LS(TAB)) &hm LC(LG(RIGHT)) LA(TAB) &hm LG(TAB) LC(LS(TAB)) &kp LC(TAB) &kp DELETE &kp KP_MINUS &kp N1 &kp N2 	&kp N3 			&kp KP_DIVIDE 
+				&hm LC(LG(LEFT)) LA(LS(TAB)) &hm LC(LG(RIGHT)) LA(TAB) &hm LG(TAB) LC(LS(TAB)) &kp LC(TAB) &kp DELETE &kp KP_MINUS &kp N1 &kp N2 	&kp N3 			&kp KP_DIVIDE 
 																&trans 			&kp LEFT_SHIFT 		&kp RETURN 		&trans 
 			>;
 		};
