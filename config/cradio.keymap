@@ -52,7 +52,7 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
-			bindings = <&gtlt>, <&kp>;
+			bindings = <&mac_gtlt>, <&kp>;
 		};
 		ht_brc:  {
 			compataible = "zmk,behavior-hold-tap";
@@ -61,7 +61,7 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
-			bindings = <&brc>, <&kp>;
+			bindings = <&mac_brc>, <&kp>;
 		};
 		ht_par:  {
 			compataible = "zmk,behavior-hold-tap";
@@ -70,7 +70,7 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
-			bindings = <&par>, <&kp>;
+			bindings = <&mac_par>, <&kp>;
 		};
 		ht_bkt:  {
 			compataible = "zmk,behavior-hold-tap";
@@ -79,7 +79,7 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
-			bindings = <&bkt>, <&kp>;
+			bindings = <mac_bkt>, <&kp>;
 		};
 	};
 	conditional_layers {
@@ -118,7 +118,7 @@
 		sym_layer {
 			bindings = <
 				&none 			&none 			&kp SEMICOLON 	&kp COLON 		&none 				&kp EQUAL 		&kp AMPS 		&kp GRAVE 		&kp TILDE 		&none 
-				&kp BACKSLASH 	&ht_ltgt LT 	&ht_brc LBRC 	&ht_par LPAR 	&ht_bkt LBKT 		&none 			&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
+				&kp BACKSLASH 	&ht_ltgt 0 LT 	&ht_brc 0 LBRC 	&ht_par 0 LPAR 	&ht_bkt 0 LBKT 		&none 			&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
 				&kp PIPE 		&kp GT 			&kp RBRC 		&kp RPAR 		&kp RBKT 			&none 			&kp EXCL 		&kp AT 			&kp HASH 		&none 
 																&trans 			&kp BACKSPACE 		&none 			&trans 
 			>;
