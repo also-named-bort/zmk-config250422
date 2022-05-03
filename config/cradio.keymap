@@ -59,6 +59,33 @@
 			flavor = "tap-preferred";
 			bindings = <&mac_ltgt>, <&kp>;
 		};
+		ht_brc: ht_brc {
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold_tap_brc";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&mac_brc>, <&kp>;
+		};
+		ht_par: ht_par {
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold_tap_par";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&mac_par>, <&kp>;
+		};
+		ht_bkt: ht_bkt {
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold_tap_bkt";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&mac_bkt>, <&kp>;
+		};
 	};
 	
 	conditional_layers {
