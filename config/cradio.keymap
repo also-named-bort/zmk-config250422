@@ -50,6 +50,15 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
+		ht_ltgt: ht_ltgt {
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold_tap_ltgt";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&mac_ltgt>, <&kp>;
+		};
 	};
 	
 	conditional_layers {
