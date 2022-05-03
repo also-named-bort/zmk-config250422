@@ -10,15 +10,33 @@
 
 / { 
 	macros {
-		zed_em_kay: zed_em_kay {
-			label = "ZM_zed_em_kay";
+		mac_ltgt: mac_ltgt {
+			label = "lessthan_greaterthan";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&macro_press &kp LSHFT>
-			, <&macro_tap &kp Z &kp M &kp K>
-			, <&macro_release &kp LSHFT>
-			;
+			= <&macro_tap &kp LT &kp GT &kp LEFT_ARROW>;
+		};
+		mac_brc: mac_brc {
+			label = "leftbrace_rightbrace";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp LBRC &kp RBRC &kp LEFT_ARROW>;
+		};
+		mac_par: mac_par {
+			label = "leftpar_rightpar";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp LPAR &kp RPAR &kp LEFT_ARROW>;
+		};
+		mac_bkt: mac_bkt {
+			label = "leftbkt_rightbkt";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp LBKT &kp RBKT &kp LEFT_ARROW>;
 		};
 	};
 	
