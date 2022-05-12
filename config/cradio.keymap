@@ -137,7 +137,7 @@
 		
 		sym_layer {
 			bindings = <
-				&none 			&none 			&kp SEMICOLON 		&kp COLON 		&kp LC(LS(EQUAL)) 	&kp LC(EQUAL) 		&kp AMPS 		&kp GRAVE 		&kp TILDE 		&none 
+				&none 			&none 			&kp SEMICOLON 		&kp COLON 		&kp LC(EQUAL) 		&kp LC(LS(EQUAL)) 	&kp AMPS 		&kp GRAVE 		&kp TILDE 		&none 
 				&kp BACKSLASH 		&ht_ltgt 0 LT 		&ht_brc 0 LBRC 		&ht_par 0 LPAR 		&ht_bkt 0 LBKT 		&kp EQUAL 		&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
 				&kp PIPE 		&kp GT 			&kp RBRC 		&kp RPAR 		&kp RBKT 		&none 			&kp EXCL 		&kp AT 			&kp HASH 		&none 
 													&mo 2 			&kp BACKSPACE 		&none 			&mo 3 
