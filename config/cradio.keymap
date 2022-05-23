@@ -38,6 +38,20 @@
 			bindings
 			= <&macro_tap &kp LBKT &kp RBKT &kp LEFT_ARROW>;
 		};
+		mac_squot; mac_squot {
+			label = "squot_squot";
+			compatible = "zmk,behaviour-macro";
+			#binding-cells = <0>;
+			bindings 
+			= <&macro_tap &kp SQT &kp SQT &kp LEFT_ARROW>;
+		};
+		mac_dquot: mac_dquot {
+			label = "dquot_dquot";
+			compatible = "zmk,behaviour-macro";
+			#binding-cells = <0>;
+			bindings 
+			= <&macro_tap &kp DQT &kp DQT &kp LEFT_ARROW>;
+		};
 	};
 	
 	behaviors {
