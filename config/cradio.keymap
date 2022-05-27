@@ -144,7 +144,7 @@
 			bindings = <
 				&hm LG(TAB) END 	&kp PAGE_DOWN 		&kp PAGE_UP 		&kp HOME 		&hm LG(TAB) ESCAPE 	&kp KP_PLUS 		&kp N7 			&kp N8 			&kp N9 			&kp KP_MULTIPLY 
 				&kp LEFT_ARROW 		&kp DOWN_ARROW 		&kp UP_ARROW 		&kp RIGHT_ARROW 	&kp TAB 		&kp DOT 		&hm RCTRL N4 		&hm RALT N5 		&hm RGUI N6 		&kp N0 
-				&hm LC(LG(LEFT)) LA(LS(TAB)) &hm LC(LG(RIGHT)) LA(TAB) &kp LC(LS(TAB)) 	&kp LC(TAB)		&kp DELETE 		&kp KP_MINUS 		&kp N1 			&kp N2 			&kp N3 			&kp KP_DIVIDE 
+				&hm LC(LG(LEFT)) LA(LS(TAB)) &hm LC(LG(RIGHT)) LA(TAB) &hm LA(LEFT) LC(LS(TAB)) &hm LA(RIGHT) LC(TAB) &kp DELETE 	&kp KP_MINUS 		&kp N1 			&kp N2 			&kp N3 			&kp KP_DIVIDE 
 													&mo 2 			&kp LEFT_SHIFT 		&kp RETURN 		&mo 3 
 			>;
 		};
