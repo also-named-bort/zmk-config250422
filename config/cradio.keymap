@@ -52,6 +52,13 @@
 			bindings 
 			= <&macro_tap &kp DQT &kp DQT &kp LEFT_ARROW>;
 		};
+		mac_tex_equat: mac_latex_equat {
+			label = "bsh_lpar_psh_rpar";
+			compatible = "zmk,behaviour-macro";
+			#binding-cells = <0>;
+			bindings 
+			= <&macro_tap &kp BACKSLASH &kp LPAR &kp BACKSLASH &kp RPAR &kp LEFT_ARROR &kp LEFT_ARROW>;
+		};
 	};
 	
 	behaviors {
