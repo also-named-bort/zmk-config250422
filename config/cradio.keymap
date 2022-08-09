@@ -52,12 +52,12 @@
 			bindings 
 			= <&macro_tap &kp DQT &kp DQT &kp LEFT_ARROW>;
 		};
-		mac_tex_equat: mac_latex_equat {
-			label = "bsh_lpar_psh_rpar";
+		mac_tex_equat: mac_tex_equat {
+			label = "tex_equat";
 			compatible = "zmk,behaviour-macro";
 			#binding-cells = <0>;
 			bindings 
-			= <&macro_tap &kp BACKSLASH &kp LPAR &kp BACKSLASH &kp RPAR &kp LEFT_ARROR &kp LEFT_ARROW>;
+			= <&macro_tap &kp BACKSLASH &kp LPAR &kp BACKSLASH &kp RPAR &kp LEFT_ARROW &kp LEFT_ARROW>;
 		};
 	};
 	
@@ -106,6 +106,15 @@
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
 			bindings = <&mac_bkt>, <&kp>;
+		};
+		ht_equat: ht_equat {
+			compatible = "zmk,behaviour-hold-tap";
+			label = "hold_tap_equat"
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavour = "tab-preferred";
+			bindings = <&mac_tex_equat>, <&kp>;
 		};
 	};
 	
@@ -159,7 +168,7 @@
 		sym_layer {
 			bindings = <
 				&none 			&none 			&kp SEMICOLON 		&kp COLON 		&kp LC(EQUAL) 		&kp LC(LS(EQUAL)) 	&kp AMPS 		&kp GRAVE 		&kp TILDE 		&none 
-				&kp BACKSLASH 		&ht_ltgt 0 LT 		&ht_brc 0 LBRC 		&ht_par 0 LPAR 		&ht_bkt 0 LBKT 		&kp EQUAL 		&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
+				&ht_equat 0 BACKSLASH 	&ht_ltgt 0 LT 		&ht_brc 0 LBRC 		&ht_par 0 LPAR 		&ht_bkt 0 LBKT 		&kp EQUAL 		&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
 				&kp PIPE 		&kp GT 			&kp RBRC 		&kp RPAR 		&kp RBKT 		&none 			&kp EXCL 		&kp AT 			&kp HASH 		&none 
 													&mo 2 			&kp BACKSPACE 		&none 			&mo 3 
 			>;
