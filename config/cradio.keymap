@@ -116,6 +116,12 @@
 			flavour = "tab-preferred";
 			bindings = <&mac_tex_equat>, <&kp>;
 		};
+		td0: tap_dance_0 {
+			compatible = "zmk,behaviour-tap-dance";
+			label = "TAP_DANCE_0";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp QUOT>, <&mac_squot>, <&mac_dquot>;
 	};
 	
 	conditional_layers {
@@ -140,7 +146,7 @@
 		
 		default_layer {
 			bindings = <
-				&kp Q 			&kp W 			&kp F 			&kp P 			&kp B 			&kp J 			&kp L 			&kp U 			&kp Y 			&kp QUOT 
+				&kp Q 			&kp W 			&kp F 			&kp P 			&kp B 			&kp J 			&kp L 			&kp U 			&kp Y 			&td0 
 				&kp A 			&hm LGUI R 		&hm LALT S 		&hm LCTRL T 		&kp G 			&kp M 			&hm RCTRL N 		&hm RALT E 		&hm RGUI I 		&kp O 
 				&kp Z 			&kp X 			&kp C 			&kp D 			&kp V 			&kp K 			&kp H 			&kp CMMA 		&kp DOT 		&kp SLASH 
 													&mo 2 			&kp LEFT_SHIFT 		&kp SPACE 		&mo 3 
