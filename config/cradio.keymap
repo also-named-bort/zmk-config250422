@@ -43,7 +43,21 @@
 			compatible = "zmk,behaviour-macro";
 			#binding-cells = <0>;
 			bindings 
-			= <&macro_tap &kp BACKSLASH &kp LPAR &kp BACKSLASH &kp RPAR &kp LEFT_ARROW &kp LEFT_ARROW>;
+			= <&macro_tap &kp BSLH &kp LPAR &kp BSLH &kp RPAR &kp LEFT_ARROW &kp LEFT_ARROW>;
+		};
+		mac_sqt: mac_sqt {
+			label = "sqt_sqt";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp SQT &kp SQT &kp LEFT_ARROW>;
+		};
+		mac_dqt: mac_dqt {
+			label = "dqt_dqt";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp DQT &kp DQT &kp LEFT_ARROW>;
 		};
 	};
 	
@@ -102,6 +116,24 @@
 			flavor = "tap-preferred";
 			bindings = <&mac_equat>, <&kp>;
 		};
+		ht_sqt: ht_sqt {
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold_tap_sqt";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&mac_sqt>, <&kp>;
+		};
+		ht_dqt: ht_dqt {
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold_tap_dqt";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&mac_dqt>, <&kp>;
+		};
 	};
 	
 	conditional_layers {
@@ -126,7 +158,7 @@
 		
 		default_layer {
 			bindings = <
-				&kp Q 			&kp W 			&kp F 			&kp P 			&kp B 			&kp J 			&kp L 			&kp U 			&kp Y 			&kp SQT 
+				&kp Q 			&kp W 			&kp F 			&kp P 			&kp B 			&kp J 			&kp L 			&kp U 			&kp Y 			&hm_dqt SQT 
 				&kp A 			&hm LGUI R 		&hm LALT S 		&hm LCTRL T 		&kp G 			&kp M 			&hm RCTRL N 		&hm RALT E 		&hm RGUI I 		&kp O 
 				&kp Z 			&kp X 			&kp C 			&kp D 			&kp V 			&kp K 			&kp H 			&kp CMMA 		&kp DOT 		&kp SLASH 
 													&mo 2 			&kp LEFT_SHIFT 		&kp SPACE 		&mo 3 
@@ -154,7 +186,7 @@
 		sym_layer {
 			bindings = <
 				&none 			&none 			&kp SEMICOLON 		&kp COLON 		&kp LC(EQUAL) 		&kp LC(LS(EQUAL)) 	&kp AMPS 		&kp GRAVE 		&kp TILDE 		&none 
-				&ht_equat 0 BACKSLASH 	&ht_ltgt 0 LT 		&ht_brc 0 LBRC 		&ht_par 0 LPAR 		&ht_bkt 0 LBKT 		&kp EQUAL 		&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
+				&ht_equat 0 BSLH 	&ht_ltgt 0 LT 		&ht_brc 0 LBRC 		&ht_par 0 LPAR 		&ht_bkt 0 LBKT 		&kp EQUAL 		&kp DLLR 		&kp PRCNT 		&kp CARET 		&kp UNDER 
 				&kp PIPE 		&kp GT 			&kp RBRC 		&kp RPAR 		&kp RBKT 		&none 			&kp EXCL 		&kp AT 			&kp HASH 		&none 
 													&mo 2 			&kp BACKSPACE 		&none 			&mo 3 
 			>;
