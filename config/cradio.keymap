@@ -11,28 +11,28 @@
 / { 
 	macros {
 		mac_ltgt: mac_ltgt {
-			label = "lessthan_greaterthan";
+			label = "lt_gt";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
 			= <&macro_tap &kp LT &kp GT &kp LEFT_ARROW>;
 		};
 		mac_brc: mac_brc {
-			label = "leftbrace_rightbrace";
+			label = "lbrc_rbrc";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
 			= <&macro_tap &kp LBRC &kp RBRC &kp LEFT_ARROW>;
 		};
 		mac_par: mac_par {
-			label = "leftpar_rightpar";
+			label = "lpar_rpar";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
 			= <&macro_tap &kp LPAR &kp RPAR &kp LEFT_ARROW>;
 		};
 		mac_bkt: mac_bkt {
-			label = "leftbkt_rightbkt";
+			label = "lbkt_rbkt";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
@@ -121,7 +121,7 @@
 			label = "TAP_DANCE_0";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&kp QUOT>, <&mac_squot>, <&mac_dquot>;
+			bindings = <&kp QUOT>, <&kp O>, <&kp T>;
 		};
 	};
 	
