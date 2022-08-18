@@ -109,19 +109,30 @@
 		};
 		ht_equat: ht_equat {
 			compatible = "zmk,behavior-hold-tap";
-			label = "hold_tap_bkt";
+			label = "hold_tap_equat";
 			#binding-cells = <2>;
 			tapping-term-ms = <200>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
 			bindings = <&mac_equat>, <&kp>;
 		};
-		td0: tap_dance_0 {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_0";
-			#binding-cells = <0>;
+		ht_squot: ht_squot {
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold_tap_squot";
+			#binding-cells = <2>;
 			tapping-term-ms = <200>;
-			bindings = <&kp QUOT>, <&kp O>, <&kp T>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&mac_squot>, <&kp>;
+		};
+		ht_dquot: ht_dquot {
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold_tap_dquot";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&mac_dquot>, <&kp>;
 		};
 	};
 	
@@ -147,7 +158,7 @@
 		
 		default_layer {
 			bindings = <
-				&kp Q 			&kp W 			&kp F 			&kp P 			&kp B 			&kp J 			&kp L 			&kp U 			&kp Y 			&td0 
+				&kp Q 			&kp W 			&kp F 			&kp P 			&kp B 			&kp J 			&kp L 			&kp U 			&kp Y 			&ht_dquot 0 SQT 
 				&kp A 			&hm LGUI R 		&hm LALT S 		&hm LCTRL T 		&kp G 			&kp M 			&hm RCTRL N 		&hm RALT E 		&hm RGUI I 		&kp O 
 				&kp Z 			&kp X 			&kp C 			&kp D 			&kp V 			&kp K 			&kp H 			&kp CMMA 		&kp DOT 		&kp SLASH 
 													&mo 2 			&kp LEFT_SHIFT 		&kp SPACE 		&mo 3 
