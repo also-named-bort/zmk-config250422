@@ -53,7 +53,7 @@
 			= <&macro_tap &kp DQT &kp DQT &kp LEFT_ARROW>;
 		};
 		mac_equat: mac_equat {
-			label = "dquot_dquot";
+			label = "bsh_lpar_bsh_rpar";
 			compatible = "zmk,behaviour-macro";
 			#binding-cells = <0>;
 			bindings 
@@ -117,7 +117,7 @@
 			bindings = <&mac_equat>, <&kp>;
 		};
 		td0: tap_dance_0 {
-			compatible = "zmk,behaviour-tap-dance";
+			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_0";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
