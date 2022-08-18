@@ -52,8 +52,8 @@
 			bindings 
 			= <&macro_tap &kp DQT &kp DQT &kp LEFT_ARROW>;
 		};
-		mac_tex_equat: mac_tex_equat {
-			label = "tex_equat";
+		mac_equat: mac_equat {
+			label = "dquot_dquot";
 			compatible = "zmk,behaviour-macro";
 			#binding-cells = <0>;
 			bindings 
@@ -108,13 +108,13 @@
 			bindings = <&mac_bkt>, <&kp>;
 		};
 		ht_equat: ht_equat {
-			compatible = "zmk,behaviour-hold-tap";
-			label = "hold_tap_equat";
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold_tap_bkt";
 			#binding-cells = <2>;
 			tapping-term-ms = <200>;
 			quick-tap-ms = <0>;
-			flavour = "tab-preferred";
-			bindings = <&mac_tex_equat>, <&kp>;
+			flavor = "tap-preferred";
+			bindings = <&mac_equat>, <&kp>;
 		};
 		td0: tap_dance_0 {
 			compatible = "zmk,behaviour-tap-dance";
